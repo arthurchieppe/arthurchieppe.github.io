@@ -1,0 +1,47 @@
+html, body{
+	height: 100%;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: #C280FF
+}
+
+table {
+	width:100%;
+	height: 100%;
+	position: absolute; 
+	top: 0; 
+	bottom: 0; 
+	left: 0; 
+	right: 0;
+}
+
+th { 
+	height: 15%; 
+	font-size: 30px;
+	border-bottom: 0.05rem solid gray;
+
+}
+
+td {
+	border-bottom: 0.05rem solid gray;
+    border-collapse: collapse;
+    padding: 15px;
+}
+button {
+    border: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    background-color: #C280FF;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+a {
+	position: absolute;
+	top: 3%;
+	z-index: 2;
+	margin: 1rem;
+	padding: 1rem;
+}

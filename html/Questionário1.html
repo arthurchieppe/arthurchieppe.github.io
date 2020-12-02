@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+    <head>
+        <title>QUESTIONÁRIO1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/Questionario1.css">
+        <link rel="stylesheet" href="../css/Questionario1.css">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <a href="tela_principal.html"><img class="seta" src="../img/seta.png" alt="Icone de pesquisa" width='30' height="30"> </a>
+            <h1>Informações Gerais</h1>
+        </header>
+        <main>
+            <h2>Quantos anos tem seu cachorro?</h2>
+            <form name = "idade" class = "opcoes">
+                <input type = "radio" id="0-1" name="idade" value="0-1">
+                <label>0-1</label><br>
+                <input type = "radio" id="1-3" name="idade" value="1-3">
+                <label>1-3</label><br>
+                <input type = "radio" id="3-5" name="idade" value="3-5">
+                <label>3-5</label><br>
+                <input type = "radio" id="5-7" name="idade" value="5-7">
+                <label>5-7</label><br>
+                <input type = "radio" id="7-10" name="idade" value="7-10">
+                <label>7-10</label><br>
+                <input type = "radio" id="10-13" name="idade" value="10-13">
+                <label>10-13</label><br>
+                <input type = "radio" id="Acimade13" name="idade" value="Acimade13">
+                <label>Acima de 13</label><br>
+            </form>
+            <h2>Qual o porte do seu cachorro?</h2>
+            <form name = "porte" class="opcoes">
+                <input type = "radio" id="Anão" name="porte" value="Anão">
+                <label>Anão</label><br>
+                <input type = "radio" id="Pequeno" name="porte" value="Pequeno">
+                <label>Pequeno</label><br>
+                <input type = "radio" id="Médio" name="porte" value="Médio">
+                <label>Médio</label><br>
+                <input type = "radio" id="Grande" name="porte" value="Grande">
+                <label>Grande</label><br>
+            </form>
+            <h2>Seu cachorro tem algum problema ou condição pré-existente?</h2>
+            <form name="pre_exist" class="opcoes">
+                <input type = "radio" id="Sim" name="pre_exist" value="Sim">
+                <label>Sim</label><br>
+                <input type = "radio" id="Não" name="pre_exist" value="Não">
+                <label>Não</label><br>
+                Caso sim, quais?<br>
+                <input>
+            </form>
+            <h2>Recentemente ele teve contato com outros cachorros?</h2>
+            <form name="contato" class="opcoes">
+                <input type = "radio" id="Sim1" name="contato" value="Sim">
+                <label>Sim</label><br>
+                <input type = "radio" id="Não1" name="contato" value="Não">
+                <label>Não</label><br>
+            </form>
+            <button id="prosseguir">Prosseguir</button>
+        </main>
+        <script>
+            var myDiv = document.createElement("div");
+            var ir = document.getElementById("prosseguir");
+            //Set its unique ID.
+            myDiv.id = 'div_id';
+
+            ir.onclick = function () {
+                var idade = document.idade.idade.value;
+                var porte = document.porte.porte.value;
+                var pre_exist = document.pre_exist.pre_exist.value;
+                var contato = document.contato.contato.value;
+
+                if (idade==""){
+                    myDiv.innerHTML = "<h2>Favor preencher todos os campos</h2>";
+                    document.body.insertBefore(myDiv, document.body.firstChild);
+                } else if (porte == ""){
+                    myDiv.innerHTML = "<h2>Favor preencher todos os campos</h2>";
+                    document.body.insertBefore(myDiv, document.body.firstChild);
+                } else if(pre_exist == ""){
+                    myDiv.innerHTML = "<h2>Favor preencher todos os campos</h2>";
+                    document.body.insertBefore(myDiv, document.body.firstChild);
+                } else if(contato == ""){
+                    myDiv.innerHTML = "<h2>Favor preencher todos os campos</h2>";
+                    document.body.insertBefore(myDiv, document.body.firstChild);
+                } else{
+                    location.href = "Questionário2.html"
+                }
+                
+            };
+        </script>    
+    </body>
+</html>

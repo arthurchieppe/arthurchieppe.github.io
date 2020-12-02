@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Ajustes do Passeio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/tela_selecao.css">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+        <a href="tela_principal.html" class="button">
+            Voltar
+            </a>
+        <h1>
+        Passear
+        </h1>    
+        </header>
+        <main>
+            <h2>
+                Quanto tempo você têm?
+            </h2>
+            <input type="range" min="1" max="120" value="50" class="slider" id="myRange">
+            <h2><span id="demo"></span> minutos</h2>
+            <h2>
+                Quer passar em algum lugar no caminho?
+            </h2>
+            
+            <input type="checkbox" id="lugar" name="Lugar">
+            <form>
+                <input type="text" placeholder="Para onde?">
+            </form>
+            <h2>
+                Rota de ida e volta?
+            </h2>
+            <input type="checkbox" id="idavolta" name="Ida e Volta">
+            <button onclick="location.href='tela_Rotas.html'" type="button">
+            Confirmar</button>
+            
+        </main>
+        <script>
+                var slider = document.getElementById("myRange");
+                var output = document.getElementById("demo");
+                output.innerHTML = slider.value;
+                
+                slider.oninput = function() {
+                  output.innerHTML = this.value;
+                }
+        </script>
+    </body>
+</html>

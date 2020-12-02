@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+    <head>
+        <title>QUESTIONÁRIO2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/Questionario2.css">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <a href="Questionário1.html"><img class="seta" src="../img/seta.png" alt="Icone de pesquisa" width='30' height="30"> </a>
+            <h1>Saúde</h1>
+        </header>
+        <main>
+
+            <h2>Quais os principais sintomas que seu cachorro está sentindo?(Selecione todas que se aplica)</h2>
+            <form name = "sintomas" class = "opcoes">
+                <input type = "checkbox">
+                <label>Letargia/Cansaço</label>
+                <input type = "checkbox">
+                <label>Diarréia</label><br>
+                <input type = "checkbox">
+                <label>Dificuldade de Comer</label>
+                <input type = "checkbox">
+                <label>Falta de Apetite</label><br>
+                <input type = "checkbox">
+                <label>Isolamento</label>
+                <input type = "checkbox">
+                <label>Tosse</label><br>
+                <input type = "checkbox">
+                <label>Dificuldade de urinar/defecar</label>
+                <input type = "checkbox">
+                <label>Perda de pelo</label><br>
+                <input type = "checkbox">
+                <label>Urina em lugares inesperados</label>
+                <input type = "checkbox">
+                <label>Dificuldade de se mexer</label><br>
+                <input type = "checkbox">
+                <label>Vômitos</label>
+                <input type = "checkbox">
+                <label>Olhos Amarelados</label><br>
+            </form>
+
+            <h2>A quanto tempo foi a última consulta de rotina do seu cachorro?</h2>
+            <form name = "consulta" class="opcoes">
+                <input type = "radio" id="Menosde1mês" name="consulta" value="Menos de 1 mês">
+                <label>Menos de 1 mês</label><br>
+                <input type = "radio" id="1-3meses" name="consulta" value="1-3 meses">
+                <label>1-3 meses</label><br>
+                <input type = "radio" id="3-6meses" name="consulta" value="3-6 meses">
+                <label>3-6 meses</label><br>
+                <input type = "radio" id="6-9meses" name="consulta" value="6-9 meses">
+                <label>6-9 meses</label><br>
+                <input type = "radio" id="9-12meses" name="consulta" value="9-12 meses">
+                <label>9-12 meses</label><br>
+                <input type = "radio" id="Maisde1ano" name="consulta" value="Mais de 1 ano">
+                <label>Mais de 1 ano</label><br>
+            </form>
+    
+            <h2>O seu cachorro está com as vacinas em dia?</h2>
+            <form name = "vacinas" class="opcoes">
+                <input type = "radio" id="Sim" name="vacinas" value="Sim">
+                <label>Sim</label><br>
+                <input type = "radio" id="Não" name="vacinas" value="Não">
+                <label>Não</label><br>
+                Caso não, quais?<br>
+                <input>
+            </form>
+            <button id="prosseguir">Prosseguir</button>
+        </main>
+        <script>
+            var myDiv = document.createElement("div");
+            var ir = document.getElementById("prosseguir");
+            //Set its unique ID.
+            myDiv.id = 'div_id';
+
+            ir.onclick = function () {
+                var consulta = document.consulta.consulta.value;
+                var vacinas = document.vacinas.vacinas.value;
+                
+                if (consulta==""){
+                    myDiv.innerHTML = "<h2>Favor preencher todos os campos</h2>";
+                    document.body.insertBefore(myDiv, document.body.firstChild);
+                } else if (vacinas == ""){
+                    myDiv.innerHTML = "<h2>Favor preencher todos os campos</h2>";
+                    document.body.insertBefore(myDiv, document.body.firstChild);
+                } else{
+                    location.href = "Questionário3.html"
+                }   
+                
+            };
+        </script>      
+    </body>
+</html>

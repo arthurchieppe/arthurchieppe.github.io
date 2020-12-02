@@ -1,0 +1,53 @@
+html, body, main{
+	height: 100%;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #C280FF;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 1rem;
+}
+a {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+h1 {
+    position: fixed;
+    top: 2%;
+    left: 47%;
+    font-size: 200%;
+}
+
+h2 {
+    margin: 1rem 0.2rem;
+    padding: 0.5rem;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    
+}
+
+form {
+    margin: 1rem 0.2rem;
+    padding: 0.5rem;
+}
+button {
+    border: none;
+    background-color: #F5D335;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 3rem;
+    margin: 1rem 0.5rem;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
